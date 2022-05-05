@@ -3,7 +3,7 @@ import { Button } from "./button";
 import styles from "../styles/form.module.css";
 
 type IFormProps = {
-  "on-submit": (payload: { title: string; description: string; price: string }) => void;
+  "on-submit": (payload: { title: string; description: string; price: number }) => void;
 }
 
 export const Form: React.FC<IFormProps> = (props) => {
@@ -17,20 +17,23 @@ export const Form: React.FC<IFormProps> = (props) => {
 
     if (!titleRef.current?.value) {
       alert("Your product needs a title");
+      return;
+    }
 
+    if (priceRef.current?.value && isNaN(+priceRef.current?.value)) {
+      alert("Price should be a numerical value");
       return;
     }
 
     if (!descriptionRef.current?.value || !priceRef.current?.value) {
       alert("Your product needs some content");
-
       return;
     }
-
+  
     props["on-submit"]({
       title: titleRef.current && titleRef.current.value,
       description: descriptionRef.current && descriptionRef.current.value,
-      price: priceRef.current && priceRef.current.value,
+      price: priceRef.current && +priceRef.current.value,
     });
 
     formRef.current?.reset();
