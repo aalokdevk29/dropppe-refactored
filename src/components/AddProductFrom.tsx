@@ -1,5 +1,5 @@
 import * as React from "react";
-import { Button } from "./button";
+import { Button } from "./GlobalButton";
 import styles from "../styles/form.module.css";
 
 type IFormProps = {

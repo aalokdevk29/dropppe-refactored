@@ -1,12 +1,12 @@
 import * as React from "react";
 import lodash from 'lodash';
 import Modal from "react-modal";
-import { HeaderConatiner } from "./Layout";
+import { HeaderConatiner } from "../Layout";
 import { FaTimes } from "react-icons/fa";
-import { Button } from "./components/button";
-import { ProductList } from "./components/product-list-components";
-import { Form } from "./components/form";
-import styles from "./styles/shopApp.module.css";
+import { Button } from "../components/GlobalButton";
+import { ProductList } from "../components/ProductList";
+import { Form } from "../components/AddProductFrom";
+import styles from "../styles/shopApp.module.css";
 
 export const ShopApp: React.FC = () => {
   const [products, setProducts] = React.useState<any>([])
