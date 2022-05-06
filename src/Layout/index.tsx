@@ -10,14 +10,14 @@ export const HeaderConatiner = () => {
     <React.Fragment>
       <div className={styles.header}>
         <div className={['container', styles.headerImageWrapper].join(' ')}>
-          <img src='./assets/droppe-logo.png' className={styles.headerImage} />
+          <img src='./assets/droppe-logo.png' className={styles.headerImage}  alt="logo"/>
         </div>
       </div>
       <React.Fragment>
         <span
           className={['container', styles.main, styles.innerFragment].join(' ')}>
-          <img src='./assets/img1.png' className={styles.showImg} />
-          <img src='./assets/img2.png' className={styles.showImg} />
+          <img src='./assets/img1.png' className={styles.showImg} alt="image1" />
+          <img src='./assets/img2.png' className={styles.showImg} alt="image2"/>
         </span>
       </React.Fragment>
     </React.Fragment>

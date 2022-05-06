@@ -1,4 +1,4 @@
-import * as React from "react";
+import React, { useRef } from "react";
 import { Button } from "./GlobalButton";
 import styles from "../styles/form.module.css";
 
@@ -7,10 +7,10 @@ type IFormProps = {
 }
 
 export const Form: React.FC<IFormProps> = (props) => {
-  let formRef = React.useRef<HTMLFormElement>(null);
-  let titleRef = React.useRef<HTMLInputElement>(null);
-  let priceRef = React.useRef<HTMLInputElement>(null);
-  let descriptionRef = React.useRef<HTMLTextAreaElement>(null);
+  let formRef = useRef<HTMLFormElement>(null);
+  let titleRef = useRef<HTMLInputElement>(null);
+  let priceRef = useRef<HTMLInputElement>(null);
+  let descriptionRef = useRef<HTMLTextAreaElement>(null);
 
   const handleSubmit = (e: any) => {
     e.preventDefault();

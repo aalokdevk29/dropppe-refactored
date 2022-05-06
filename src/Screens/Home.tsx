@@ -1,4 +1,4 @@
-import * as React from "react";
+import React,{useState, useEffect} from "react";
 import lodash from 'lodash';
 import Modal from "react-modal";
 import { HeaderConatiner } from "../Layout";
@@ -9,14 +9,14 @@ import { Form } from "../components/AddProductFrom";
 import styles from "../styles/shopApp.module.css";
 
 export const ShopApp: React.FC = () => {
-  const [products, setProducts] = React.useState<any>([])
-  const [openModel, setOpenModel] = React.useState<boolean>(false)
-  const [isShowingMessage, setIsShowingMessage] = React.useState<boolean>(false)
-  const [message, setMessage] = React.useState<string>()
-  const [numFavorites, setNumFavorites] = React.useState<number>(0)
-  const [prodCount, setProdCount] = React.useState<number>(0)
+  const [products, setProducts] = useState<any>([])
+  const [openModel, setOpenModel] = useState<boolean>(false)
+  const [isShowingMessage, setIsShowingMessage] = useState<boolean>(false)
+  const [message, setMessage] = useState<string>()
+  const [numFavorites, setNumFavorites] = useState<number>(0)
+  const [prodCount, setProdCount] = useState<number>(0)
 
-  React.useEffect(() => {
+  useEffect(() => {
     fetch('https://fakestoreapi.com/products').then((response) => {
       let jsonResponse = response.json();
       jsonResponse.then((rawData) => {
