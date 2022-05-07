@@ -1,12 +1,12 @@
 import React from "react";
 import ReactDOM from "react-dom";
-import Modal from "react-modal"
+import Modal from "react-modal";
 import "./index.css";
 import App from "./App";
 import * as serviceWorker from "./serviceWorker";
 import { BrowserRouter } from "react-router-dom";
 
-Modal.setAppElement("#root")
+Modal.setAppElement("#root");
 
 ReactDOM.render(
   <React.StrictMode>

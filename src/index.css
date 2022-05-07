@@ -29,6 +29,19 @@ code {
 }
 
 .notFoundContainer{
-  max-width: 750px;
-  margin: auto; 
+  position: relative;
+  left: 40%;
+  top: 45%;
+  z-index: 1000;
+  height: auto;
+  width: auto;
+}
+
+.loader{
+    position: absolute;
+    left: 50%;
+    top: 45%;
+    z-index: 1000;
+    height: auto;
+    width: auto;
 }
